@@ -35,20 +35,19 @@
 
 **The authoritative sources. Read these first.**
 
-- [Agentic Web Wiki: WebMCP](https://agenticweb.wiki/protocols/webmcp/) - Protocol status, browser positions, and changelog distilled from the spec and vendor docs (updated October 2026).
 - [Awesome WebMCP (Official)](https://github.com/webmachinelearning/awesome-webmcp) - Curated list maintained by the Web Machine Learning Community Group.
 - [ChatGPT Learn: Site Tools (WebMCP)](https://learn.chatgpt.com/docs/webmcp) - How OpenAI's desktop built-in browser discovers and runs WebMCP tools on live pages.
 - [Chrome Declarative API Guide](https://developer.chrome.com/docs/ai/webmcp/declarative-api) - Turn annotated HTML forms into WebMCP tools without imperative registration code.
 - [Chrome Early Preview Announcement](https://developer.chrome.com/blog/webmcp-epp) - How WebMCP fits into Chrome 146+.
 - [Chrome Imperative API Guide](https://developer.chrome.com/docs/ai/webmcp/imperative-api) - Register tools with `document.modelContext.registerTool()` and manage lifecycle with `AbortSignal`.
-- [Chrome WebMCP and AI Agents](https://developer.chrome.com/docs/ai/agents) - Overview of producer/consumer architecture and how agents discover page tools.
+- [Chrome WebMCP and AI Agents](https://developer.chrome.com/docs/ai/agents) - Overview of how sites register tools, how the browser exposes them to agents, and how agents call them.
 - [Chrome WebMCP Best Practices](https://developer.chrome.com/docs/ai/webmcp/best-practices) - Tool design, context window hygiene, and UI synchronization guidance from Chrome.
 - [Chrome WebMCP Secure Tools](https://developer.chrome.com/docs/ai/webmcp/secure-tools) - Permission, confirmation, and untrusted-content patterns for consequential tool calls.
 - [Chrome WebMCP Usage Guide](https://developer.chrome.com/blog/webmcp-mcp-usage) - Agent integration details and practical usage patterns.
 - [document.modelContext (Web Features Explorer)](https://web-platform-dx.github.io/web-features-explorer/features/document-modelcontext/) - Baseline status and vendor standards positions for the WebMCP API surface.
 - [Edge WebMCP Origin Trial](https://developer.microsoft.com/en-us/microsoft-edge/origin-trials/trials/0b76fe60-b266-458e-a285-04e375c0c31a) - Register Edge 150+ origins for the WebMCP origin trial through March 2027.
 - [Model Context Protocol (MCP) Core Spec](https://modelcontextprotocol.io/specification/latest) - The server-side counterpart that WebMCP brings to the browser.
-- [Shopify WebMCP API Reference](https://shopify.dev/docs/api/web-mcp) - Catalog, cart, and checkout tools automatically exposed on Liquid and Hydrogen storefronts.
+- [Shopify WebMCP API Reference](https://shopify.dev/docs/api/web-mcp) - Catalog, cart, and checkout tools on every Liquid storefront, and on Hydrogen 2026-10 storefronts that render ShopifyScripts or call initializeShopifyScripts (on by default; set webMcp to false to turn them off).
 - [WebMCP GitHub Repo](https://github.com/webmachinelearning/webmcp) - Spec source, issues, and implementation-status tracking.
 - [WebMCP Spec (W3C Community Group Draft)](https://webmachinelearning.github.io/webmcp) - Full IDL, tool registration, schemas, and security model.
 
@@ -73,7 +72,7 @@
 
 ## 📖 Tutorials & Hands-On Guides
 
-**Step-by-step walkthroughs covering both the Declarative API (HTML attributes) and the Imperative API (`navigator.modelContext.registerTool`).**
+**Step-by-step walkthroughs covering both the Declarative API (HTML attributes) and the Imperative API (`document.modelContext.registerTool`).**
 
 - [BetterStack Complete Guide](https://betterstack.com/community/guides/ai/webmcp-ai-web/) - Deep dive with a flight-booking example app.
 - [Chrome Agentic JavaScript Tools (Modern Web Guidance)](https://developer.chrome.com/docs/modern-web-guidance/guides/webmcp/agentic-javascript-tools) - Agent-oriented patterns for `registerTool()` in SPAs, including producer vs consumer roles (October 2026).
@@ -177,6 +176,7 @@ From the [webmcp-tools](https://github.com/GoogleChromeLabs/webmcp-tools) repo:
 
 **Essays and long-form write-ups from the last few months.**
 
+- [Agentic Web Wiki: WebMCP](https://agenticweb.wiki/protocols/webmcp/) - Protocol status, browser positions, and changelog distilled from the spec and vendor docs (updated October 2026).
 - [Alfy: WebMCP, Explained with a To-Do App](https://alfy.blog/2026/11/08/webmcp-explained-with-a-to-do-app.html) - Walkthrough of seven TodoMVC tools, declarative forms, `AbortSignal` lifecycle, and agent vs UI automation benchmarks (November 2026).
 - [Rich Devtools: WebMCP in 2026](https://richdevtools.com/articles/web/webmcp-origin-trial) - Origin-trial setup, `document.modelContext` migration notes, and local flag testing (October 2026).
 - [Yoav Weiss: Why WebMCP matters](https://blog.yoav.ws/posts/why_webmcp_matters/) - Production lessons from Shopify WebMCP, co-browsing performance data, and TAG-level API design context (October 2026).
